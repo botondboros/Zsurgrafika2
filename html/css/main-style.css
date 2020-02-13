@@ -1,0 +1,2320 @@
+/*----------------------------------------------------------------c
+@Author: CodeoStudio
+@URL:    http://codeostudio.hr/
+
+[Table of contents]
+1. Body
+2. Wrapper
+3. Typography
+4. Forms
+5. Sidebar
+    5.1 Widget - search
+    5.2 Widget - recent entries
+    5.3 Widget - calendar
+    5.4 Widget - tags
+    5.5 Widget - social profiles
+    5.6 Widget - popular posts
+    5.7 Widget - trending posts
+    5.8 Widget - banner 300x250
+    5.9 Widget - post list
+    5.10 Widget - comments
+6. Off-canvas wrap
+    6.1 Off-canvas nav
+    6.2 Off-canvas info
+    6.3 Off-canvas social
+7. Top bar
+    7.1 Top info
+    7.2 Top social
+    7.3 Header
+    7.4 Site brand
+    7.5 Primary menu
+8. Main slider
+9. Restaurant items
+    9.1 Restaurant list
+    9.2 Filter grid
+    9.3 Restaurant grid
+    9.4 Restaurant overlay
+10. Team members
+11. Blog
+12. Pages
+    12.1 Page title
+    12.2 404 Page
+    12.3 Contact
+13. Footer
+14. Responsive styles
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+    1. Body
+-------------------------------------------------------------------*/
+body,
+html {
+    position: relative
+}
+body {
+    background-color: #fff;
+    color: #555;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.cs-container:before,
+.cs-container:after,
+.cs-clearfix:before,
+.cs-clearfix:after,
+.cs-row:before,
+.cs-row:after {
+    content: " ";
+    display: table
+}
+.cs-container:after,
+.cs-clearfix:after,
+.cs-row:after {
+    clear: both
+}
+
+/*------------------------------------------------------------------
+    2. Wrapper
+-------------------------------------------------------------------*/
+#cs-wrapper {
+    background-color: #fff;
+    width: 100%
+}
+#cs-wrapper.wide {
+    width: 100%
+}
+#cs-wrapper.boxed {
+    max-width: 1340px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1)
+}
+.cs-container {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1300px
+}
+.cs-fullwidth-container {}
+.cs-fullwidth-container:before,
+.cs-fullwidth-container:after {
+    content: " ";
+    display: table
+}
+.cs-fullwidth-container:after {
+    clear: both
+}
+.cs-fullwidth-container.with-padding {
+    padding: 80px 0
+}
+.cs-fullwidth-container.with-padding:first-child {
+    padding-top: 0
+}
+.cs-fullwidth-container.with-padding.with-color-bg:first-child {
+    padding-top: 80px;
+    margin-top: -80px
+}
+.cs-fullwidth-container.with-color-bg {
+    background-color: #f9f9f9;
+    font-size: 13px;
+    text-align: justify;
+
+}
+.cs-fullwidth-container.with-border-bottom {
+    border-bottom: 1px solid #eee;
+}
+.cs-main-content {
+    width: 100%;
+    margin-bottom: 40px
+}
+.cs-main-content .cs-main-content {
+    margin-bottom: 0
+}
+.cs-main-content:before,
+.cs-main-content:after {
+    content: " ";
+    display: table
+}
+.cs-main-content:after {
+    clear: both
+}
+.cs-main-content.cs-sidebar-on-the-right {
+    float: left;
+    width: 73.5%;
+    padding-right: 4.5%
+}
+.cs-main-content.cs-sidebar-on-the-left {
+    float: right;
+    width: 73.5%;
+    padding-left: 4.5%
+}
+
+/*------------------------------------------------------------------
+    3. Typography
+-------------------------------------------------------------------*/
+a {
+    text-decoration: none;
+    outline: 0;
+    background-color: transparent;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+a:hover {
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    color: #000
+}
+a:focus,
+a:active {
+    outline: 0;
+    border: 0;
+    text-decoration: none
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    text-decoration: none;
+    outline: 0;
+    border: 0
+}
+a img {
+    text-decoration: none;
+    outline: 0;
+    border: 0
+}
+iframe,
+object,
+video,
+audio {
+    max-width: 100%
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+    font-weight: 700;
+    margin: 0 0 20px 0
+}
+h1 {
+    font-size: 30px;
+    line-height: 38px
+}
+h2 {
+    font-size: 26px;
+    line-height: 34px
+}
+h3 {
+    font-size: 22px;
+    line-height: 30px
+}
+h4 {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 10px
+}
+h5 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px
+}
+h6 {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 10px
+}
+p {
+    margin: 0 0 20px 0
+}
+hr {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    border: 0;
+    height: 0;
+    margin-bottom: 20px;
+    border-top: 1px solid #eee;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+.text_left {
+    text-align: left
+}
+.text_right {
+    text-align: right
+}
+.text_center {
+    text-align: center
+}
+.text_justify {
+    text-align: justify
+}
+.alignleft,
+img.alignleft {
+    float: left;
+    margin: 5px 40px 20px 0
+}
+.alignright,
+img.alignright {
+    float: right;
+    margin: 5px 0 20px 40px
+}
+.aligncenter,
+img.aligncenter {
+    clear: both;
+    display: block;
+    margin: 40px auto
+}
+.wp-caption {
+    text-align: center;
+    max-width: 100%
+}
+.wp-caption img {
+    max-width: 100%
+}
+.wp-caption-text {
+    font-size: 14px;
+    color: #999;
+    padding: 5px 0;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+pre {
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    font-size: 12px;
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #eee;
+    border: none
+}
+mark {
+    padding: 2px 4px;
+    background-color: #eee
+}
+kbd {
+    padding: 2px 4px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #000
+}
+code {
+    padding: 2px 4px;
+    font-size: 12px;
+    background-color: #eee
+}
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 20px
+}
+ul {
+    list-style: disc
+}
+ol {
+    list-style: decimal
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin-bottom: 0
+}
+dl {
+    margin-top: 0;
+    margin-bottom: 20px
+}
+dt {
+    font-weight: 700
+}
+dd {
+    margin-left: 10px
+}
+address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 24px;
+    font-size: 16px
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd
+}
+table thead {
+    background-color: #eee;
+    color: #000
+}
+table tr:nth-child(even) {
+    background-color: #f9f9f9
+}
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    vertical-align: bottom;
+    border: 1px solid #ddd
+}
+blockquote {
+    margin: 0 0 40px 0;
+    border-left-style: solid;
+    border-left-width: 3px;
+    padding: 10px 0 10px 30px;
+}
+blockquote p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+}
+blockquote footer {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700
+}
+blockquote footer strong {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000
+}
+ul.page-numbers {
+    margin-bottom: 20px;
+    list-style: none;
+    padding: 0;
+    clear: both;
+    font-size: 12px
+}
+ul.page-numbers:before,
+ul.page-numbers:after {
+    content: " ";
+    display: table
+}
+ul.page-numbers:after {
+    clear: both
+}
+ul.page-numbers li {
+    display: block;
+    float: left;
+    margin-right: 3px;
+    margin-left: 3px
+}
+ul.page-numbers li span,
+ul.page-numbers li a {
+    display: block;
+    padding: 12px;
+    line-height: 1;
+    background-color: #eee;;
+    color: #555;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s
+}
+ul.page-numbers li span.current {
+    color: #fff
+}
+
+/*------------------------------------------------------------------
+    4. Forms
+-------------------------------------------------------------------*/
+form {
+    position: relative;
+}
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit
+}
+textarea {
+    width: 100%;
+    min-height: 180px
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+    color: #000
+}
+label input[type="checkbox"],
+label input[type="radio"] {
+    float: left;
+    margin-top: 4px;
+    margin-right: 8px
+}
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="phone"],
+input[type="number"],
+input[type="email"],
+input[type="datetime"],
+input[type="search"],
+input[type="tel"],
+textarea,
+select {
+    padding: 10px 15px;
+    outline: none;
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    max-width: 100%;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-weight: 400;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus,
+input[type="phone"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="datetime"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    color: #000;
+    border: 1px solid #000
+}
+
+/*------------------------------------------------------------------
+    5. Sidebar
+-------------------------------------------------------------------*/
+.cs-main-sidebar {
+    float: left;
+    width: 26.5%;
+    margin-bottom: 40px
+}
+.widget {
+    margin-bottom: 40px
+}
+.widget a {
+    color: #000
+}
+.widget input[type="search"],
+.widget select {
+    width: 100%
+}
+.widget-title {
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #000;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1
+}
+.widget-title span {
+    display: inline-block;
+    padding: 0 20px;
+    background-color: #fff;
+}
+.widget-title span:before,
+.widget-title span:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: -1
+}
+
+/* Global */
+.widget_archive ul,
+.widget_categories ul,
+.widget_meta ul,
+.widget_recent_comments ul,
+.widget_nav_menu ul,
+.widget_links ul,
+.widget_pages ul,
+.widget_recent_entries ul,
+.widget_rss ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_meta ul li,
+.widget_recent_comments ul li,
+.widget_nav_menu ul li,
+.widget_links ul li,
+.widget_pages ul li,
+.widget_recent_entries ul li,
+.widget_rss ul li {
+    border-top: 1px solid #eee;
+    padding: 5px 0;
+    color: #555
+}
+.widget_archive ul li:first-child,
+.widget_categories ul li:first-child,
+.widget_links ul li:first-child,
+.widget_meta ul li:first-child,
+.widget_nav_menu ul li:first-child,
+.widget_pages ul li:first-child,
+.widget_recent_comments ul li:first-child,
+.widget_recent_entries ul li:first-child,
+.widget_rss ul li:first-child {
+    border-top: 0;
+    padding-top: 0;
+    padding-bottom: 5px
+}
+.widget_archive ul li:last-child,
+.widget_categories ul li:last-child,
+.widget_links ul li:last-child,
+.widget_meta ul li:last-child,
+.widget_nav_menu ul li:last-child,
+.widget_pages ul li:last-child,
+.widget_recent_comments ul li:last-child,
+.widget_recent_entries ul li:last-child,
+.widget_rss ul li:last-child {
+    padding-bottom: 0
+}
+.widget_categories .children,
+.widget_nav_menu .sub-menu,
+.widget_pages .children {
+    border-top: 1px solid #eee;
+    padding-top: 5px;
+    margin: 5px 0 0 15px
+}
+
+/*------------------------------------------------------------------
+    5.1 Widget - search
+-------------------------------------------------------------------*/
+.widget_search button,
+.widget_product_search input[type="submit"],
+.widget_search input[type="submit"],
+.widget_search form .screen-reader-text,
+.widget_product_search form .screen-reader-text {
+    display: none
+}
+.widget_search input[type="search"] {
+    padding: 15px;
+    outline: none;
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    max-width: 100%;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-weight: 400;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.widget_search input[type="search"]:focus {
+    color: #000;
+    border: 1px solid #000
+}
+
+/*------------------------------------------------------------------
+    5.2 Widget - recent entries
+-------------------------------------------------------------------*/
+.widget_recent_entries .post-date {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+}
+.widget_recent_entries ul li {
+    padding: 10px 0
+}
+.widget_recent_entries ul li:first-child {
+    padding-bottom: 10px
+}
+.widget_recent_entries ul li:last-child {
+    padding-top: 10px
+}
+
+/*------------------------------------------------------------------
+    5.3 Widget - calendar
+-------------------------------------------------------------------*/
+.widget_calendar th,
+.widget_calendar td {
+    text-align: center;
+}
+.widget_calendar caption {
+    margin-bottom: 5px
+}
+
+/*------------------------------------------------------------------
+    5.4 Widget - tags
+-------------------------------------------------------------------*/
+.widget_tag_cloud .tagcloud:before,
+.widget_tag_cloud .tagcloud:after {
+    content: " ";
+    display: table
+}
+.widget_tag_cloud .tagcloud:after {
+    clear: both
+}
+.widget_tag_cloud .tagcloud a {
+    float: left;
+    padding: 8px 10px;
+    margin: 0 5px 5px 0;
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    outline: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    color: #fff;
+    position: relative;
+    border: 0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+.widget_tag_cloud .tagcloud a:hover {
+    color: #fff;
+    background-color: #000
+}
+
+/*------------------------------------------------------------------
+    5.5 Widget - social profiles
+-------------------------------------------------------------------*/
+.widget_social_profiles ul {
+    font-size: 0;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0
+}
+.widget_social_profiles ul:before,
+.widget_social_profiles ul:after {
+    content: " ";
+    display: table
+}
+.widget_social_profiles ul:after {
+    clear: both
+}
+.widget_social_profiles ul li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 14px
+}
+.widget_social_profiles ul li a {
+    color: #fff;
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.widget_social_profiles ul li a:hover {
+    color: #fff;
+    background-color: #000
+}
+
+/*------------------------------------------------------------------
+    5.6 Widget - popular posts
+-------------------------------------------------------------------*/
+.widget_popular_posts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.widget_popular_posts ul li {
+    margin-bottom: 30px;
+}
+.widget_popular_posts ul li .cs-post {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0
+}
+.widget_popular_posts ul li .cs-post .cs-post-media {
+    margin-bottom: 10px
+}
+.widget_popular_posts ul li .cs-post .cs-post-header {
+    margin-bottom: 0
+}
+.widget_popular_posts ul li .cs-post .cs-post-header h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 4px
+}
+.widget_popular_posts ul li .cs-post .cs-post-meta {
+    font-size: 12px;
+    line-height: 20px
+}
+
+/*------------------------------------------------------------------
+    5.7 Widget - trending posts
+-------------------------------------------------------------------*/
+.widget_trending_posts {}
+.widget_trending_posts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.widget_trending_posts ul:before,
+.widget_trending_posts ul:after {
+    content: " ";
+    display: table
+}
+.widget_trending_posts ul:after {
+    clear: both
+}
+.widget_trending_posts ul li {
+    margin-bottom: 5px;
+    float: left;
+    margin-right: 4%;
+    width: 48%
+}
+.widget_trending_posts ul li:nth-child(2n) {
+    margin-right: 0;
+}
+.widget_trending_posts ul li .cs-post {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0
+}
+.widget_trending_posts ul li .cs-post .cs-post-media {
+    margin-bottom: 10px
+}
+.widget_trending_posts ul li .cs-post .cs-post-header {
+    margin-bottom: 0
+}
+.widget_trending_posts ul li .cs-post .cs-post-header h3 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700
+}
+
+/*------------------------------------------------------------------
+    5.8 Widget - banner 300x250
+-------------------------------------------------------------------*/
+.widget_banner_300x250 .banner {
+    background-color: #eee;
+    padding: 17px;
+    text-align: center;
+}
+
+/*------------------------------------------------------------------
+    5.9 Widget - post list
+-------------------------------------------------------------------*/
+.widget_post_list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.widget_post_list ul li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.widget_post_list ul li:last-child {
+    border-bottom: 0
+}
+.widget_post_list ul li .cs-post {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0
+}
+.widget_post_list ul li .cs-post .cs-post-media {
+    width: 80px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 0
+}
+.widget_post_list ul li .cs-post .cs-post-header {
+    overflow: hidden;
+}
+.widget_post_list ul li .cs-post .cs-post-header h3 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    margin-bottom: 3px
+}
+.widget_post_list ul li .cs-post .cs-post-meta {
+    font-size: 12px;
+    line-height: 20px
+}
+
+/*------------------------------------------------------------------
+    5.10 Widget - comments
+-------------------------------------------------------------------*/
+.cs-widget-comments ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.cs-widget-comments ul li {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px
+}
+.cs-widget-comments ul li:before,
+.cs-widget-comments ul li:after {
+    content: " ";
+    display: table
+}
+.cs-widget-comments ul li:after {
+    clear: both
+}
+.cs-widget-comments ul li .cs-post-media {
+    width: 60px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 0
+}
+.cs-widget-comments ul li .cs-post-media img {
+    width: 100%;
+    opacity: 1;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.cs-widget-comments ul li .cs-post-media img:hover {
+    opacity: 0.8
+}
+.cs-widget-comments ul li .cs-post-header {
+    overflow: hidden;
+}
+.cs-widget-comments ul li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0
+}
+.cs-widget-comments ul li h4 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px
+}
+.cs-widget-comments ul li h4 a {
+    display: block;
+}
+.cs-widget-comments ul li .cs-post-author {
+    font-size: 0;
+    line-height: 1
+}
+.cs-widget-comments ul li .cs-post-author a {
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/*------------------------------------------------------------------
+    6. Off-canvas wrap
+-------------------------------------------------------------------*/
+.cs-toggle-nav {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -25px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+}
+#cs-header .cs-header-inner-sticky.active .cs-toggle-nav {
+    color: #000
+}
+.cs-offcanvas-wrap {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    z-index: 99999;
+    overflow-y: scroll;
+    font-size: 14px;
+    line-height: 24px
+}
+.cs-offcanvas-wrap.active {
+    left: 0
+}
+.cs-offcanvas-wrap .close {
+    display: inline-block;
+    cursor: pointer;
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*------------------------------------------------------------------
+    6.1 Off-canvas nav
+-------------------------------------------------------------------*/
+.cs-offcanvas-nav {
+    margin-bottom: 40px
+}
+.cs-offcanvas-nav nav ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.cs-offcanvas-nav nav ul li {
+    width: 100%;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    border-top: 1px solid #eee
+}
+.cs-offcanvas-nav nav ul li a {
+    display: inline-block;
+    padding: 5px 20px;
+    color: #000
+}
+.cs-offcanvas-nav nav ul li.menu-item-has-children i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.2s;
+    -o-transition: -o-transform 0.2s;
+    transition: transform 0.2s;
+}
+.cs-offcanvas-nav nav ul li.show-sub-menu > i {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.cs-offcanvas-nav ul.sub-menu {
+    display: none;
+}
+.cs-offcanvas-nav ul.sub-menu li a {
+    padding-left: 40px
+}
+.cs-offcanvas-nav ul.sub-menu ul li a {
+    padding-left: 60px
+}
+.cs-offcanvas-nav ul.sub-menu ul ul li a {
+    padding-left: 80px
+}
+.cs-offcanvas-nav ul.sub-menu ul ul ul li a {
+    padding-left: 100px
+}
+
+/*------------------------------------------------------------------
+    6.2 Off-canvas info
+-------------------------------------------------------------------*/
+.cs-offcanvas-info {
+    margin-bottom: 20px
+}
+.cs-offcanvas-info nav {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.cs-offcanvas-info nav ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.cs-offcanvas-info nav ul li i {
+    margin-right: 8px
+}
+
+/*------------------------------------------------------------------
+    6.3 Off-canvas social
+-------------------------------------------------------------------*/
+.cs-offcanvas-social {
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+.cs-offcanvas-social nav {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.cs-offcanvas-social nav ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0
+}
+.cs-offcanvas-social nav ul li {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px
+}
+.cs-offcanvas-social nav ul li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.cs-offcanvas-social nav ul li a:hover {
+    background-color: #000
+}
+
+/*------------------------------------------------------------------
+    7. Top bar
+-------------------------------------------------------------------*/
+#cs-top-bar {
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    line-height: 35px
+}
+#cs-top-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+#cs-top-bar ul li {
+    display: inline-block;
+}
+
+/*------------------------------------------------------------------
+    7.1 Top info
+-------------------------------------------------------------------*/
+#cs-top-bar .cs-top-info {
+    float: left;
+}
+#cs-top-bar .cs-top-info ul li {
+    margin-right: 20px
+}
+#cs-top-bar .cs-top-info ul li i {
+    margin-right: 5px
+}
+
+/*------------------------------------------------------------------
+    7.2 Top social
+-------------------------------------------------------------------*/
+#cs-top-bar .cs-top-social {
+    float: right;
+    font-size: 14px
+}
+#cs-top-bar .cs-top-social ul li a {
+    display: block;
+    padding: 0 5px;
+    color: #fff
+}
+#cs-top-bar .cs-top-social ul li:last-child a {
+    padding-right: 0
+}
+
+/*------------------------------------------------------------------
+    7.3 Header
+-------------------------------------------------------------------*/
+#cs-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    z-index: 99
+}
+#cs-top-bar + #cs-header {
+    top: 35px
+}
+#cs-header .cs-header-inner {
+    position: relative
+}
+#cs-header .cs-header-inner-sticky {
+    background-color: #000;
+    background-color: rgba(0,0,0,0.35);
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+}
+#cs-header .cs-header-inner-sticky.active {
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.95);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 9
+}
+
+/*------------------------------------------------------------------
+    7.4 Site brand
+-------------------------------------------------------------------*/
+#cs-site-brand {
+    display: inline-block;
+    overflow: hidden;
+}
+#cs-site-brand img {
+    height: 50px;
+    width: auto
+}
+#cs-site-brand h1 {
+    line-height: 90px;
+    margin: 0
+}
+#cs-site-brand .black,
+#cs-site-brand .white {
+    position: absolute;
+}
+#cs-header .cs-header-inner-sticky #cs-site-brand .black {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    opacity: 0;
+    left: -50px;
+}
+#cs-header .cs-header-inner-sticky.active #cs-site-brand .white {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    opacity: 0;
+}
+#cs-header .cs-header-inner-sticky.active #cs-site-brand .black {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    opacity: 1;
+    left: 20px
+}
+
+/*------------------------------------------------------------------
+    7.5 Primary menu
+-------------------------------------------------------------------*/
+.cs-primary-nav {
+    float: right;
+}
+.cs-primary-nav > nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.cs-primary-nav > nav > ul > li {
+    display: inline-block;
+    position: relative;
+    margin-left: 20px
+}
+.cs-primary-nav > nav > ul > li > a {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 90px;
+    letter-spacing: 1px;
+    display: block;
+    color: #fff
+}
+#cs-header .cs-header-inner-sticky.active .cs-primary-nav > nav > ul > li > a {
+    color: #000
+}
+.cs-primary-nav li.menu-item-has-children i {
+    display: none;
+}
+.cs-primary-nav > nav > ul > li.menu-item-has-children > a:after {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "FontAwesome";
+    content: "\f107";
+    padding-left: 5px;
+    margin-top: -3px;
+    font-size: 10px;
+    color: #999;
+    font-style: normal;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.cs-primary-nav ul.sub-menu {
+    background-color: #000;
+    font-size: 14px;
+    line-height: 22px;
+    display: none;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    min-width: 220px;
+    padding: 20px;
+    margin-left: -20px
+}
+.cs-primary-nav ul.sub-menu ul.sub-menu {
+    left: 100%;
+    margin-left: 0;
+    margin-top: -20px;
+    top: 0
+}
+.cs-primary-nav li:hover > ul.sub-menu {
+    display: block
+}
+.cs-primary-nav ul.sub-menu li.menu-item-has-children > a:after {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    display: inline-block;
+    font-family: "FontAwesome";
+    content: "\f105";
+    font-size: 12px;
+    color: #999;
+    font-style: normal;
+}
+.cs-primary-nav ul.sub-menu li.menu-item-has-children:hover > a,
+.cs-primary-nav ul.sub-menu li.menu-item-has-children:hover > a:after {
+    color: #fff
+}
+.cs-primary-nav ul.sub-menu li {
+    position: relative;
+    border-top: 1px solid #333
+}
+.cs-primary-nav ul.sub-menu li:first-child {
+    border-top: 0
+}
+.cs-primary-nav ul.sub-menu li a {
+    color: #999;
+    display: block;
+    padding: 5px 0
+}
+.cs-primary-nav ul.sub-menu li a:hover {
+    color: #fff
+}
+
+/*------------------------------------------------------------------
+    8. Main slider
+-------------------------------------------------------------------*/
+#cs-main-slider {
+    margin-bottom: 80px
+}
+.ls-layers {}
+
+/*------------------------------------------------------------------
+    9. Restaurant items
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+    9.1 Restaurant list
+-------------------------------------------------------------------*/
+.cs-restaurant-items-list {
+    margin-bottom: 40px
+}
+.cs-restaurant-items-list .cs-restaurant-item {
+    display: table;
+    width: 100%;
+    margin-top: 30px
+}
+.cs-restaurant-items-list .cs-restaurant-item:first-child {
+    margin-top: 0
+}
+.cs-restaurant-items-list .cs-restaurant-item:before,
+.cs-restaurant-items-list .cs-restaurant-item:after {
+    content: " ";
+    display: table
+}
+.cs-restaurant-items-list .cs-restaurant-item:after {
+    clear: both
+}
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-image {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 20px;
+    width: 100px;
+}
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-image img {
+    width: 100%;
+    height: auto;
+    padding: 3px;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+.cs-restaurant-items-list .cs-restaurant-item:hover .cs-item-image img {
+    border: 0;
+    -webkit-transform: scale(1.10);
+    -ms-transform: scale(1.10);
+    transform: scale(1.10);
+}
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-text {
+    display: table-cell;
+    vertical-align: middle;
+}
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-text .cs-item-title {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 5px
+}
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-text .cs-item-description {
+    position: relative
+}
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-text .cs-item-description .cs-text {
+    padding-right: 60px;
+    font-weight: 700;
+    color: #000
+}
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-text .cs-item-description .cs-text h4 {
+    background-color: #fff;
+    padding-right: 8px;
+    position: relative;
+    display: inline-block;
+    margin: 0
+}
+.cs-fullwidth-container.with-color-bg .cs-restaurant-items-list .cs-restaurant-item .cs-item-text .cs-item-description .cs-text h4 {
+    background-color: #f9f9f9
+}
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-text .cs-item-description .cs-text:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 6px;
+    border-bottom: 2px dotted #ddd
+}
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-text .cs-item-description .cs-price {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-left: 10px;
+    background-color: #fff
+}
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-text .cs-item-description .cs-price sup {
+    font-size: 12px;
+    top: -6px
+}
+.cs-fullwidth-container.with-color-bg .cs-restaurant-items-list .cs-restaurant-item .cs-item-text .cs-item-description .cs-price {
+    background-color: #f9f9f9
+}
+
+/*------------------------------------------------------------------
+    9.2 Filter grid
+-------------------------------------------------------------------*/
+.button-group.filter-button-group {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.button-group.filter-button-group button {
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    outline: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    position: relative;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+.button-group.filter-button-group button:hover,
+.button-group.filter-button-group button.is-checked {
+    color: #fff;
+    background-color: #000;
+    border-color: #000
+}
+
+/*------------------------------------------------------------------
+    9.3 Restaurant grid
+-------------------------------------------------------------------*/
+.cs-restaurant-items-grid {
+    display: block;
+    clear: both;
+    margin-left: -15px;
+    margin-right: -15px
+}
+.cs-restaurant-items-grid:before,
+.cs-restaurant-items-grid:after {
+    content: " ";
+    display: table
+}
+.cs-restaurant-items-grid:after {
+    clear: both
+}
+.cs-restaurant-grid-item {
+    margin-bottom: 40px;
+    float: left;
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px
+}
+.cs-restaurant-grid-item .cs-grid-image {
+    margin-bottom: 15px;
+}
+.cs-restaurant-grid-item .cs-grid-image img {
+    width: 100%;
+}
+.cs-restaurant-grid-item .cs-grid-image > a {
+    position: relative;
+    display: block;
+}
+.cs-restaurant-grid-item .cs-grid-image > a:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    border: 1px solid #fff;
+    opacity: 0.65;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+.cs-restaurant-grid-item .cs-grid-image:hover > a:before {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0
+}
+.cs-restaurant-grid-item .cs-grid-details {
+    text-align: center;
+}
+.cs-restaurant-grid-item .cs-grid-details .cs-item-title h4 {
+    margin-bottom: 5px;
+    color: #000
+}
+.cs-restaurant-grid-item .cs-grid-details .cs-text {
+    font-size: 14px;
+    line-height: 20px
+}
+.cs-restaurant-grid-item .cs-grid-details .cs-price {
+    margin-top: 5px;
+    font-size: 20px;
+    line-height: 28px
+}
+.cs-restaurant-grid-item .cs-grid-details .cs-price sup {
+    font-size: 12px;
+    top: -6px
+}
+
+/*------------------------------------------------------------------
+    9.4 Restaurant overlay
+-------------------------------------------------------------------*/
+.cs-restaurant-items-overlay {
+    display: block;
+    clear: both;
+    margin-bottom: 40px;
+}
+.cs-restaurant-items-overlay:before,
+.cs-restaurant-items-overlay:after {
+    content: " ";
+    display: table
+}
+.cs-restaurant-items-overlay:after {
+    clear: both
+}
+.cs-restaurant-overlay-item {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin: 0
+}
+.cs-restaurant-overlay-item .cs-overlay-image {
+    background-color: #000;
+    position: relative;
+}
+.cs-restaurant-overlay-item .cs-overlay-image img {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.cs-restaurant-overlay-item .cs-overlay-image:before {
+    z-index: 8;
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    border: 1px solid #fff;
+    opacity: 0.65;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+.cs-restaurant-overlay-item .cs-overlay-image img {
+    opacity: 0.5;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+.cs-restaurant-overlay-item:hover .cs-overlay-image img {
+    opacity: 1
+}
+.cs-restaurant-overlay-item .cs-overlay-details {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    -webkit-transition: top 0.2s ease-in-out;
+    -moz-transition: top 0.2s ease-in-out;
+    -o-transition: top 0.2s ease-in-out;
+    transition: top 0.2s ease-in-out;
+    padding: 0 20px
+}
+.cs-restaurant-overlay-item:hover .cs-overlay-details {    
+    top: -100%;    
+}
+.cs-restaurant-overlay-item .cs-overlay-details .cs-item-title h4 {
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 700
+}
+.cs-restaurant-overlay-item .cs-overlay-details .cs-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff
+}
+.cs-restaurant-overlay-item .cs-overlay-details .cs-price {
+    margin-top: 5px;
+    font-size: 20px;
+    line-height: 28px;
+}
+.cs-restaurant-overlay-item .cs-overlay-details .cs-price sup {
+    font-size: 12px;
+    top: -6px
+}
+
+
+/*------------------------------------------------------------------
+    10. Team members
+-------------------------------------------------------------------*/
+.cs-team-member {
+    text-align: center;
+    margin-bottom: 40px
+}
+.cs-team-member .cs-member-avatar {
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #000
+}
+.cs-team-member .cs-member-avatar img {
+    width: 100%;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.cs-team-member .cs-member-avatar:hover img {
+    opacity: 0.8;
+    -webkit-transform: scale(1.02, 1.02);
+    -moz-transform: scale(1.02, 1.02);
+    -ms-transform: scale(1.02, 1.02);
+    transform: scale(1.02, 1.02)
+}
+.cs-team-member .cs-member-name {
+    margin-bottom: 10px
+}
+.cs-team-member .cs-member-name h4 {
+    margin: 0 0 3px 0;
+    font-weight: 700
+}
+.cs-team-member .cs-member-name span {
+    display: block;
+    color: #999
+}
+.cs-team-member .cs-member-description p {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: justify;
+}
+.cs-team-member .cs-member-social nav {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.cs-team-member .cs-member-social nav ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0
+}
+.cs-team-member .cs-member-social nav ul li {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 3px
+}
+.cs-team-member .cs-member-social nav ul li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.cs-team-member.special {
+    display: table;
+    width: 100%
+}
+.cs-team-member.special .cs-member-avatar {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.cs-team-member.special .cs-team-details {
+    padding: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    background-color: #000;
+    color: #777
+}
+.cs-team-member.special .cs-member-name span {
+    color: #fff
+}
+.cs-team-member.special .cs-member-social nav {
+    text-align: left;
+}
+.cs-team-member.special .cs-member-social nav ul li {
+    margin: 0 6px 0 0
+}
+.cs-team-member .cs-member-social nav ul li a {
+    background-color: #333;
+    color: #fff
+}
+
+/*------------------------------------------------------------------
+    11. Blog
+-------------------------------------------------------------------*/
+.cs-post {
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    text-align: justify;
+}
+.cs-post .cs-post-media {
+    margin: 0 0 20px 0;
+    padding: 0
+}
+.cs-post .cs-post-media img,
+.cs-post .cs-post-media video,
+.cs-post .cs-post-media audio,
+.cs-post .cs-post-media iframe {
+    width: 100%
+}
+.cs-post .cs-post-header {
+    margin-bottom: 20px
+}
+.cs-post .cs-post-header h2.cs-post-title {
+    margin: 0
+}
+.cs-post .cs-post-header h2.cs-post-title a {
+    color: #000;
+    font-weight: 700
+}
+.cs-post .cs-post-header h1.cs-post-title {
+    margin: 0
+}
+.cs-post .cs-post-meta {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #999;
+    margin-bottom: 5px
+}
+.cs-post .cs-post-content {}
+.cs-post .cs-post-content a.read-more {
+    text-transform: uppercase;
+    text-align: justify;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1px
+}
+.cs-post-single-tags {
+    font-size: 14px
+}
+.cs-post-single-tags span {
+    color: #000;
+    font-weight: 700;
+    margin-right: 10px;
+    display: inline-block;
+}
+.cs-post-single-controls {
+    font-size: 16px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 40px
+}
+.cs-post-single-controls a {
+    width: 49.5%;
+    margin-right: 1%;
+    float: left;
+    text-align: center;
+    padding: 8px 12px;
+    background-color: #eee;
+    color: #888;
+    font-weight: 700
+}
+.cs-post-single-controls a:only-child {
+    width: 100%;
+    margin-right: 0
+}
+.cs-post-single-controls a:last-child {
+    margin-right: 0
+}
+.cs-post-single-controls a i {
+    margin: 0 10px
+}
+.cs-post-single-controls a:hover {
+    background-color: #000;
+    color: #fff
+}
+
+/*------------------------------------------------------------------
+    11.1 Comments and respond
+-------------------------------------------------------------------*/
+.no_comments {
+    text-align: center;
+    margin-bottom: 40px
+}
+.no_comments i {
+    font-size: 32px;
+    color: #ddd
+}
+.no_comments h4 {
+    margin-bottom: 0
+}
+.no_comments p {
+    font-size: 14px;
+    line-height: 22px
+}
+#commentform {
+    margin-bottom: 60px
+}
+#commentform:before,
+#commentform:after {
+    content: " ";
+    display: table
+}
+#commentform:after {
+    clear: both
+}
+#commentform .comment-info i {
+    color: #000
+}
+#commentform .comment-info strong {
+    color: #000
+}
+#commentform .comment-form-author input,
+#commentform .comment-form-email input,
+#commentform .comment-form-url input {
+    width: 100%
+}
+#commentform .comment-form-author,
+#commentform .comment-form-email,
+#commentform .comment-form-url {
+    width: 31.3%;
+    float: left;
+    margin-right: 3%
+}
+#commentform .comment-form-url {
+    margin-right: 0
+}
+#commentform .form-submit {
+    clear: both;
+}
+#commentform .form-submit input[type="submit"] {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px 5px 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    outline: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    color: #fff;
+    position: relative;
+    border: 0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+#commentform .form-submit input[type="submit"]:hover {
+    background-color: #000
+}
+
+/* Comment output */
+.cs-comments-area {
+    margin-bottom: 60px
+}
+.cs-comment-list,
+.cs-comment-list ol,
+.cs-comment-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.cs-comment-list ul.children {
+    margin-left: 80px
+}
+.cs-comment-list .cs-comment {
+    margin-bottom: 40px
+}
+.cs-comment-list .cs-comment-author {
+    overflow: hidden;
+}
+.cs-comment-list .cs-comment-author img {
+    width: 60px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px
+}
+.cs-comment-list .cs-comment-author div {
+    overflow: hidden;
+    padding-top: 15px
+}
+.cs-comment-list .cs-comment-author div b {
+    display: block;
+    line-height: 13px;
+}
+.cs-comment-list .cs-comment-author div b a {
+    color: #000
+}
+.cs-comment-list .cs-comment-author div time {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #888;
+}
+.cs-comment-list .cs-comment-content {
+    margin-left: 80px;
+    position: relative;
+}
+.cs-comment-list .pingback .cs-comment-content {
+    margin-left: 0;
+    margin-top: 10px
+}
+.cs-comment-list .cs-comment-content a.cs-reply {
+    position: absolute;
+    right: 0;
+    top: -30px;
+    font-size: 10px;
+    padding: 4px 8px;
+    line-height: 1;
+    color: #fff
+}
+.cs-comment-list .cs-comment-content a.cs-reply:hover {
+    color: #fff;
+    background-color: #000
+}
+
+
+/*------------------------------------------------------------------
+    12. Pages
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+    12.1 Page title
+-------------------------------------------------------------------*/
+#cs-page-title {
+    z-index: 1;
+    position: relative;
+    background-color: #000;
+    min-height: 90px;
+    margin-bottom: 80px
+}
+#cs-page-title .cs-title-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2
+}
+#cs-page-title:before {
+    z-index: 2;
+    content: " ";
+    position: absolute;
+    height: 40%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+#cs-page-title:after {
+    z-index: 2;
+    content: " ";
+    position: absolute;
+    height: 70%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */
+}
+#cs-page-title .cs-title-inner {
+    z-index: 3;
+    position: relative;
+    width: 100%;
+    padding: 170px 0 80px 0;
+    text-align: center;
+}
+#cs-page-title .cs-title-inner h2 {
+    font-size: 100px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    font-weight: 400
+}
+#cs-page-title .cs-title-inner h4 {
+    color: rgb(14, 13, 13);
+    font-weight: 300
+}
+
+/*------------------------------------------------------------------
+    12.2 404 Page
+-------------------------------------------------------------------*/
+.cs-page-404 {
+    text-align: center;
+    padding: 100px 0
+}
+.cs-page-404 small {
+    margin: 0;
+    text-transform: uppercase;
+    color: #ccc
+}
+.cs-page-404 h4 {
+    color: #000;
+    font-weight: 700;
+    margin: 0
+}
+.cs-page-404 .title-404 {
+    font-size: 160px;
+    line-height: 160px;
+    margin: 20px 0;
+    color: #ccc
+}
+
+/*------------------------------------------------------------------
+    12.3 Contact
+-------------------------------------------------------------------*/
+.cs-contact-map {
+    padding: 0
+}
+.cs-contact-map iframe {
+    width: 100%;
+    height: 500px
+}
+form.wpcf7-form input[type="text"],
+form.wpcf7-form input[type="password"],
+form.wpcf7-form input[type="url"],
+form.wpcf7-form input[type="phone"],
+form.wpcf7-form input[type="number"],
+form.wpcf7-form input[type="email"],
+form.wpcf7-form input[type="datetime"],
+form.wpcf7-form input[type="search"],
+form.wpcf7-form input[type="tel"],
+form.wpcf7-form textarea,
+form.wpcf7-form select {
+    width: 100%
+}
+form.wpcf7-form label {
+    display: block;
+    margin-bottom: 5px
+}
+form.wpcf7-form input[type="submit"] {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px 5px 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    outline: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    color: #fff;
+    position: relative;
+    border: 0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+form.wpcf7-form input[type="submit"]:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/*------------------------------------------------------------------
+    13. Footer
+-------------------------------------------------------------------*/
+#cs-footer {
+    background-color: #000;
+    background-image: url(../html/couple_hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #777;
+    text-align: center;
+    padding: 50px 0
+}
+#cs-footer .cs-footer-logo {
+    margin-bottom: 30px
+}
+#cs-footer .cs-footer-about {
+    max-width: 60%;
+    margin: 0 auto 30px auto
+}
+#cs-footer .cs-footer-about p {
+    line-height: 22px;
+}
+#cs-footer .cs-footer-about p:last-child {
+    margin-bottom: 0
+}
+#cs-footer .cs-footer-social {
+    margin-bottom: 30px
+}
+#cs-footer .cs-footer-social nav {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+#cs-footer .cs-footer-social nav ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0
+}
+#cs-footer .cs-footer-social nav ul li {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 3px
+}
+#cs-footer .cs-footer-social nav ul li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #222;
+    color: #ddd;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+#cs-footer .cs-footer-social nav ul li a:hover {
+    color: #fff
+}
+#cs-footer .cs-footer-copyright {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/*------------------------------------------------------------------
+    14. Responsive styles
+-------------------------------------------------------------------*/
+/* styles for screens larger than 1040px */
+@media screen and (min-width: 1040px) {
+    [class *= "cs-col"] {
+        float: left;
+    }
+}
+
+/* styles for screens between 800px and 1039 */
+@media screen and (min-width: 800px) and (max-width: 1039px) {
+    .cs-primary-nav > nav > ul > li {
+        margin-left: 10px
+    }
+    .cs-primary-nav > nav > ul > li > a {
+        font-size: 12px
+    }
+    [class *= "cs-col"] {
+        float: left;
+    }
+}
+
+/* styles for mobile browsers smaller than 799px */
+@media screen and (max-width: 799px) {
+    [class *= "cs-col"] {
+        width: 100%
+    }
+    .cs-toggle-nav {
+        display: block;
+    }
+    #cs-header .cs-header-inner-sticky .cs-toggle-nav,
+    #cs-header .cs-header-inner-sticky.active .cs-toggle-nav {
+        color: #000
+    }
+    #cs-top-bar {
+        display: none;
+    }
+    #cs-top-bar + #cs-header {
+        top: 0
+    }
+    .cs-primary-nav {
+        display: none
+    }
+    #cs-header .cs-header-inner-sticky {
+        background-color: #fff;
+        background-color: rgba(255,255,255,0.95);
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 9;
+        padding: 15px 0
+    }
+    #cs-header #cs-site-brand {
+        overflow: visible;
+    }
+    #cs-header .cs-header-inner-sticky #cs-site-brand .black,
+    #cs-header .cs-header-inner-sticky.active #cs-site-brand .black {
+        opacity: 1;
+        left: 0;
+        position: relative;
+    }
+    #cs-header .cs-header-inner-sticky #cs-site-brand .white,
+    #cs-header .cs-header-inner-sticky.active #cs-site-brand .white {
+        display: none;
+    }
+    .cs-restaurant-items-list .cs-restaurant-item .cs-item-image {
+        width: 60px;
+    }
+
+    .cs-team-member.special .cs-member-avatar {
+        display: block;
+        height: 250px;
+        width: 100%;
+        margin: 0
+    }
+    .cs-team-member.special .cs-team-details {
+        display: block
+    }
+    .cs-team-member.special .cs-member-name span {
+        color: #fff
+    }
+}

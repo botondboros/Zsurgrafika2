@@ -1,0 +1,83 @@
+/*------------------------------------------------------------------
+
+@Author: CodeoStudio
+@URL:    http://codeostudio.hr/
+
+[Table of contents]
+
+1. Text
+2. Background
+3. Border
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+    1. Text
+-------------------------------------------------------------------*/
+a,
+.cs-primary-nav > nav > ul li.current-menu-item > a,
+.cs-primary-nav > nav > ul > li:hover > a,
+.cs-primary-nav > nav > ul > li.menu-item-has-children:hover > a:after,
+#cs-header .cs-header-inner-sticky.active .cs-primary-nav > nav > ul li.current-menu-item > a,
+#cs-header .cs-header-inner-sticky.active .cs-primary-nav > nav > ul > li:hover > a,
+#cs-header .cs-header-inner-sticky.active .cs-primary-nav > nav > ul > li.menu-item-has-children:hover > a:after,
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-text .cs-item-description .cs-price,
+#cs-page-title .cs-title-inner h2,
+#cs-top-bar .cs-top-social ul li a:hover,
+.cs-offcanvas-info nav ul li i,
+.cs-tab-group .ui-tabs-nav li.ui-tabs-active a,
+.cs-tab-group .ui-tabs-nav li:hover a,
+.cs-accordion-group .cs-accordion-title:hover,
+.cs-accordion-group .cs-accordion-title.ui-state-active,
+.cs-dropcap:first-letter,
+.pullquotes:after,
+.cs-btn.cs-btn-border,
+blockquote footer,
+.cs-teaser-title .inner span i,
+.cs-teaser-title h4,
+#cs-footer .cs-footer-copyright a,
+.cs-team-member .cs-member-name h4,
+.cs-restaurant-grid-item .cs-grid-details .cs-price,
+.cs-service-box .cs-service-icon i,
+.button-group.filter-button-group button,
+.cs-fullwidth-container.with-parallax .cs-parallax-inner h2,
+.cs-restaurant-overlay-item .cs-overlay-details .cs-price {
+	color: #dea94c
+}
+
+/*------------------------------------------------------------------
+    2. Background
+-------------------------------------------------------------------*/
+.cs-btn,
+.cs-offcanvas-social nav ul li a,
+.cs-offcanvas-wrap .close,
+.cs-accordion-group .cs-accordion-title:after,
+.cs-teaser-title .inner span:before,
+.cs-teaser-title .inner span:after,
+#cs-footer .cs-footer-social nav ul li a:hover,
+.cs-team-member .cs-member-social nav ul li a:hover,
+.widget_social_profiles ul li a,
+.widget-title span:before,
+.widget-title span:after,
+.widget_tag_cloud .tagcloud a,
+form.wpcf7-form input[type="submit"],
+.button-group.filter-button-group button,
+ul.page-numbers li span.current,
+#commentform .form-submit input[type="submit"],
+.cs-comment-list .cs-comment-content a.cs-reply {
+	background-color: #dea94c
+}
+
+/*------------------------------------------------------------------
+    3. Border
+-------------------------------------------------------------------*/
+.cs-accordion-group .cs-accordion-title.ui-state-active,
+.cs-restaurant-items-list .cs-restaurant-item .cs-item-image img,
+.cs-tab-group .ui-tabs-nav li.ui-tabs-active a,
+.cs-tab-group .ui-tabs-nav li:hover a,
+.pullquotes,
+blockquote,
+.cs-btn.cs-btn-border,
+.button-group.filter-button-group button {
+	border-color: #dea94c
+}

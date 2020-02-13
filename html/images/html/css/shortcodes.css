@@ -1,0 +1,518 @@
+/*------------------------------------------------------------------
+
+@Author: CodeoStudio
+@URL:    http://codeostudio.hr/
+
+[Table of contents]
+
+1. Columns
+2. Accordions
+3. Tabs
+4. Alert boxes
+5. Dropcaps
+6. Pullquotes
+7. Buttons
+8. Titles
+9. Parallax title
+10. Service boxes
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+    1. Columns
+-------------------------------------------------------------------*/
+.cs-row {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px
+}
+[class *= "cs-col"] {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px
+}
+.cs-col-1 {
+    width: 8.33333333%
+}
+.cs-col-2 {
+    width: 16.66666667%
+}
+.cs-col-3 {
+    width: 25%
+}
+.cs-col-4 {
+    width: 33.33333333%
+}
+.cs-col-5 {
+    width: 41.66666667%
+}
+.cs-col-6 {
+    width: 50%
+}
+.cs-col-7 {
+    width: 58.33333333%
+}
+.cs-col-8 {
+    width: 66.66666667%
+}
+.cs-col-9 {
+    width: 75%
+}
+.cs-col-10 {
+    width: 83.33333333%
+}
+.cs-col-11 {
+    width: 91.66666667%
+}
+.cs-col-12 {
+    width: 100%
+}
+
+/*------------------------------------------------------------------
+    2. Accordions
+-------------------------------------------------------------------*/
+.cs-accordion-group {
+    margin-bottom: 40px
+}
+.cs-accordion-group .cs-accordion-title {
+    color: #000;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 55px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    border: 1px solid #eee
+}
+.cs-accordion-group .cs-accordion-title:after {
+    font-family: 'FontAwesome';
+    content: "\f105";
+    font-size: 12px;
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.cs-accordion-group .cs-accordion-title.ui-state-active:after {
+    font-family: 'FontAwesome';
+    content: "\f107";
+}
+.cs-accordion-group .cs-accordion-panel {
+    padding: 20px 0;
+}
+.cs-accordion-group .cs-accordion-panel + .cs-accordion-title {
+    margin-top: -1px
+}
+.cs-accordion-group .cs-accordion-panel p:last-child {
+    margin: 0
+}
+
+/*------------------------------------------------------------------
+    3. Tabs
+-------------------------------------------------------------------*/
+.cs-tab-group {
+    margin-bottom: 40px
+}
+.cs-tab-group .ui-tabs-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden
+}
+.cs-tab-group .ui-tabs-nav li {
+    float: left;
+}
+.cs-tab-group .ui-tabs-nav li a {
+    outline: none;
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000
+}
+.cs-tab-group .ui-tabs-panel {
+    margin-top: -1px;
+    padding: 20px 0 0 0;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #eee
+}
+.cs-tab-group .ui-tabs-panel p:last-child {
+    margin: 0
+}
+.cs-tab-group .ui-tabs-nav li.ui-tabs-active a,
+.cs-tab-group .ui-tabs-nav li:hover a {
+    border-bottom-style: solid;
+    border-bottom-width: 1px
+}
+
+/*------------------------------------------------------------------
+    4. Alert boxes
+-------------------------------------------------------------------*/
+.cs-alert + .cs-alert {
+    margin-top: -35px
+}
+.cs-alert {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 40px;
+    color: #fff
+}
+.cs-alert p {
+    overflow: hidden;
+    margin: 2px 0 0 35px
+}
+.cs-alert i {
+    position: absolute;
+    left: 20px;
+    top: 20px
+}
+.cs-alert.cs-alert-green {
+    background-color: #EBF6E0;
+    color: #5f9025
+}
+.cs-alert.cs-alert-blue {
+    background-color: #E9F7FE;
+    color: #5091b2
+}
+.cs-alert.cs-alert-red {
+    background-color: #ffe9e9;
+    color: #de5959
+}
+.cs-alert.cs-alert-yellow {
+    background-color: #FBFADD;
+    color: #8f872e
+}
+
+/*------------------------------------------------------------------
+    5. Dropcaps
+-------------------------------------------------------------------*/
+.cs-dropcap:first-letter {
+    float: left;
+    display: block;
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 25px 0 15px;
+    font-weight: 400
+}
+
+/*------------------------------------------------------------------
+    6. Pullquotes
+-------------------------------------------------------------------*/
+.pullquotes {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    border-style: solid;
+    border-width: 1px;
+    padding: 30px;
+    z-index: 1;
+    color: #000
+}
+.pullquotes.left {
+    float: left;
+    width: 35%;
+    margin: 20px 40px 20px 0
+}
+.pullquotes.right {
+    float: right;
+    text-align: right;
+    width: 35%;
+    margin: 20px 0 20px 40px;
+}
+
+/*------------------------------------------------------------------
+    7. Buttons
+-------------------------------------------------------------------*/
+.cs-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px 5px 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    outline: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    color: #fff;
+    position: relative;
+    border: 0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+.cs-btn.cs-btn-border {
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+}
+.cs-btn.cs-btn-border:hover {
+    border: 1px solid #000;
+}
+.cs-btn.cs-btn-small {
+    padding: 5px 10px;
+    font-size: 12px
+}
+.cs-btn.cs-btn-large {
+    padding: 15px 20px;
+    font-size: 18px
+}
+.cs-btn.cs-btn-extralarge {
+    padding: 20px 25px;
+    font-size: 24px
+}
+.cs-btn.cs-btn-expand {
+    width: 100%;
+    display: block
+}
+.cs-btn.cs-btn-expand + .cs-btn.cs-btn-expand {
+    margin-top: 5px
+}
+.cs-btn.cs-btn-white {
+    background-color: #f1f1f1;
+    color: #333
+}
+.cs-btn.cs-btn-white:hover {
+    color: #fff
+}
+.cs-btn.cs-btn-black {
+    background-color: #222
+}
+.cs-btn.cs-btn-red {
+    background-color: #683c17
+}
+.cs-btn.cs-btn-green {
+    background-color: #71a866
+}
+.cs-btn.cs-btn-tirquese {
+    background-color: #7fccbc
+}
+.cs-btn.cs-btn-blue {
+    background-color: #508fd1
+}
+.cs-btn.cs-btn-pink {
+    background-color: #9d5fac
+}
+.cs-btn.cs-btn-orange {
+    background-color: #c47839
+} 
+.cs-btn.cs-btn-grey {
+    background-color: #b1b0a7
+}
+.cs-btn.cs-btn-with-icon {
+    padding-left: 44px
+}
+.cs-btn.cs-btn-small.cs-btn-with-icon {
+    padding-left: 32px
+}
+.cs-btn.cs-btn-large.cs-btn-with-icon {
+    padding-left: 60px
+}
+.cs-btn.cs-btn-extralarge.cs-btn-with-icon {
+    padding-left: 84px
+}
+.cs-btn.cs-btn-with-icon i {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    text-align: center;
+    width: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0.1);
+}
+.cs-btn.cs-btn-small.cs-btn-with-icon i {
+    width: 22px;
+    line-height: 22px;
+    font-size: 10px;
+}
+.cs-btn.cs-btn-large.cs-btn-with-icon i {
+    width: 48px;
+    line-height: 48px;
+    font-size: 16px;
+}
+.cs-btn.cs-btn-extralarge.cs-btn-with-icon i {
+    width: 64px;
+    line-height: 60px;
+    font-size: 22px;
+}
+.cs-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/*------------------------------------------------------------------
+    8. Titles
+-------------------------------------------------------------------*/
+.cs-teaser-title {
+    margin-top: 80px;
+    margin-bottom: 80px
+}
+.cs-teaser-title:first-child {
+    margin-top: 0
+}
+.cs-teaser-title h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 5px;
+    display: block;
+}
+.cs-teaser-title h4 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 400
+}
+.cs-teaser-title .inner {
+    overflow: hidden;
+    position: relative;
+    z-index: 1
+}
+.cs-teaser-title .inner + p {
+    margin-top: 15px
+}
+.cs-teaser-title.text_right .inner span {
+    padding: 0 0 0 10px
+}
+.cs-teaser-title.text_center .inner span {
+    padding: 0 10px
+}
+.cs-teaser-title .inner span {
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+}
+.cs-teaser-title .inner span:before,
+.cs-teaser-title .inner span:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 80px;
+    height: 1px;
+    top: 50%;
+    z-index: -1;
+    display: block;
+}
+.cs-teaser-title .inner span:before {
+    display: none;
+}
+.cs-teaser-title .inner span:after {
+    left: 35px
+}
+.cs-teaser-title.text_right .inner span:before {
+    right: 35px;
+    display: block;
+}
+.cs-teaser-title.text_right .inner span:after {
+    display: none;
+}
+.cs-teaser-title.text_center .inner span:before {
+    left: 50%;
+    right: auto;
+    margin-left: -100px;
+    display: block;
+}
+.cs-teaser-title.text_center .inner span:after {
+    right: 50%;
+    left: auto;
+    margin-right: -100px;
+    display: block;
+}
+
+/*------------------------------------------------------------------
+    9. Parallax title
+-------------------------------------------------------------------*/
+.cs-fullwidth-container.with-parallax {
+    z-index: 1;
+    position: relative;
+    background-color: #000
+}
+.cs-fullwidth-container.with-parallax .cs-parallax-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+}
+.cs-fullwidth-container.with-parallax .cs-parallax-inner {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 100px 0
+}
+.cs-fullwidth-container.with-parallax .cs-parallax-inner .cs-parallax-title h2 {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+.cs-fullwidth-container.with-parallax .cs-parallax-inner .cs-parallax-title h4 {
+    color: #fff;
+    font-weight: 300;
+    margin: 0
+}
+
+/*------------------------------------------------------------------
+    10. Service boxes
+-------------------------------------------------------------------*/
+.cs-service-box {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+.cs-service-box .cs-service-icon {
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+.cs-service-box:hover .cs-service-icon {
+    -webkit-transform: translate(0, -10px);
+    -moz-transform: translate(0, -10px);
+    -ms-transform: translate(0, -10px);
+    transform: translate(0, -10px);
+}
+.cs-service-box .cs-service-icon i {
+    font-size: 48px;
+    line-height: 1
+}
+.cs-service-box .cs-service-icon img {
+    width: 100px
+}
+.cs-service-box .cs-service-content {}
+.cs-service-box .cs-service-content h3 {
+    margin-bottom: 10px
+}
+.cs-service-box .cs-service-content h3 a {
+    color: #000
+}
+.cs-service-box .cs-service-content p {}
