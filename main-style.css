@@ -2036,8 +2036,20 @@ textarea:focus {
     position: relative;
     background-color: #000;
     min-height: 90px;
-    margin-bottom: 80px
+    margin-bottom: 80px;
 }
+
+#cs-page-title h2 {
+    font-size: 30px;
+    color: rgb(128, 24, 24);
+}
+
+#cs-page-title h2 {
+    font-size: 50px;
+    color: rgb(59, 49, 49);
+}
+
+
 #cs-page-title .cs-title-image {
     background-size: cover;
     background-repeat: no-repeat;
@@ -2081,7 +2093,6 @@ textarea:focus {
     text-align: center;
 }
 #cs-page-title .cs-title-inner h2 {
-    font-size: 60px;
     color: rgb(128, 24, 24);
     line-height: 50px;
     margin-bottom: 10px;
