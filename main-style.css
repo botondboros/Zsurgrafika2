@@ -2039,12 +2039,12 @@ textarea:focus {
     margin-bottom: 80px;
 }
 
-#cs-page-title h2 {
+.miez h2 {
     font-size: 30px;
     color: rgb(128, 24, 24);
 }
 
-#cs-page-title h2 {
+.miez h2 {
     font-size: 50px;
     color: rgb(59, 49, 49);
 }
@@ -2091,16 +2091,6 @@ textarea:focus {
     width: 100%;
     padding: 170px 0 80px 0;
     text-align: center;
-}
-#cs-page-title .cs-title-inner h2 {
-    color: rgb(128, 24, 24);
-    line-height: 50px;
-    margin-bottom: 10px;
-    font-weight: 400
-}
-#cs-page-title .cs-title-inner h4 {
-    color: rgb(14, 13, 13);
-    font-weight: 300
 }
 
 /*------------------------------------------------------------------
