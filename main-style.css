@@ -2081,7 +2081,8 @@ textarea:focus {
     text-align: center;
 }
 #cs-page-title .cs-title-inner h2 {
-    font-size: 100px;
+    font-size: 60px;
+    color: rgb(73, 13, 13);
     line-height: 50px;
     margin-bottom: 10px;
     font-weight: 400
@@ -2173,6 +2174,7 @@ form.wpcf7-form input[type="submit"]:hover {
 -------------------------------------------------------------------*/
 #cs-footer {
     background-color: #000;
+    background-image: url(../html/couple_hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     color: #777;
