@@ -1269,12 +1269,12 @@ textarea:focus {
 .cs-primary-nav > nav > ul {
     list-style: none;
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 .cs-primary-nav > nav > ul > li {
     display: inline-block;
     position: relative;
-    margin-left: 20px
+    margin-left: 20px;
 }
 .cs-primary-nav > nav > ul > li > a {
     position: relative;
@@ -1286,7 +1286,7 @@ textarea:focus {
     color: #fff
 }
 #cs-header .cs-header-inner-sticky.active .cs-primary-nav > nav > ul > li > a {
-    color: #000
+    color: #000;
 }
 .cs-primary-nav li.menu-item-has-children i {
     display: none;
@@ -1318,16 +1318,16 @@ textarea:focus {
     z-index: 10;
     min-width: 220px;
     padding: 20px;
-    margin-left: -20px
+    margin-left: -20px;
 }
 .cs-primary-nav ul.sub-menu ul.sub-menu {
     left: 100%;
     margin-left: 0;
     margin-top: -20px;
-    top: 0
+    top: 0;
 }
 .cs-primary-nav li:hover > ul.sub-menu {
-    display: block
+    display: block;
 }
 .cs-primary-nav ul.sub-menu li.menu-item-has-children > a:after {
     position: absolute;
@@ -1342,11 +1342,11 @@ textarea:focus {
 }
 .cs-primary-nav ul.sub-menu li.menu-item-has-children:hover > a,
 .cs-primary-nav ul.sub-menu li.menu-item-has-children:hover > a:after {
-    color: #fff
+    color: #fff;
 }
 .cs-primary-nav ul.sub-menu li {
     position: relative;
-    border-top: 1px solid #333
+    border-top: 1px solid #333;
 }
 .cs-primary-nav ul.sub-menu li:first-child {
     border-top: 0
@@ -1354,10 +1354,10 @@ textarea:focus {
 .cs-primary-nav ul.sub-menu li a {
     color: #999;
     display: block;
-    padding: 5px 0
+    padding: 5px 0;
 }
 .cs-primary-nav ul.sub-menu li a:hover {
-    color: #fff
+    color: #fff;
 }
 
 /*------------------------------------------------------------------
