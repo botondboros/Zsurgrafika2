@@ -153,12 +153,12 @@ body {
 }
 .cs-main-content.cs-sidebar-on-the-right {
     float: left;
-    width: 73.5%;
+    width: 100%;
     padding-right: 4.5%
 }
 .cs-main-content.cs-sidebar-on-the-left {
     float: right;
-    width: 73.5%;
+    width: 100%;
     padding-left: 4.5%
 }
 
@@ -1838,7 +1838,7 @@ textarea:focus {
     font-size: 14px;
     line-height: 22px;
     letter-spacing: 1px;
-    width:100%;
+    padding: -15%;
 }
 .cs-post-single-tags {
     font-size: 14px
