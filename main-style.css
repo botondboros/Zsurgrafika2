@@ -1283,7 +1283,7 @@ textarea:focus {
     line-height: 90px;
     letter-spacing: 1px;
     display: block;
-    color: #fff
+    color: #000000
 }
 #cs-header .cs-header-inner-sticky.active .cs-primary-nav > nav > ul > li > a {
     color: #000
