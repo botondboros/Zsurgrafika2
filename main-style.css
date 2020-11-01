@@ -2252,7 +2252,7 @@ form.wpcf7-form input[type="submit"]:hover {
         margin-left: 10px
     }
     .cs-primary-nav > nav > ul > li > a {
-        font-size: 12px
+        font-size: 20px
     }
     [class *= "cs-col"] {
         float: left;
