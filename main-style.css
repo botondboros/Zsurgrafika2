@@ -188,12 +188,12 @@ a:active {
 }
 img {
     vertical-align: middle;
+  object-fit: cover;
     max-width: 100%;
     text-decoration: none;
     outline: 0;
     border: 0;
-    aspect-ratio: attr(width) / attr(height)
-}
+   }
 a img {
     text-decoration: none;
     outline: 0;
@@ -1529,8 +1529,8 @@ textarea:focus {
     margin-bottom: 40px;
     float: left;
     width: 25%;
-    padding-left: 15px;
-    padding-right: 15px
+    padding-left: 10px;
+    padding-right: 10px
 }
 .cs-restaurant-grid-item .cs-grid-image {
     margin-bottom: 15px;
