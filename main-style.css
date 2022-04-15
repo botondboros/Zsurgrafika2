@@ -189,10 +189,10 @@ a:active {
 img {
     vertical-align: middle;
     max-width: 100%;
-    height: auto;
     text-decoration: none;
     outline: 0;
-    border: 0
+    border: 0;
+    aspect-ratio: attr(width) / attr(height)
 }
 a img {
     text-decoration: none;
