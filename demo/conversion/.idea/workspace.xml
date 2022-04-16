@@ -23,8 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f50e9e84-ddb5-46bb-92bf-1d7427d42ab7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../lazarlovaspark.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../viragok.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../viragok.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lazarlovaspark.jpg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../viragok.jpg" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -71,5 +71,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1650116636104">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1650116636104" />
   </component>
 </project>
